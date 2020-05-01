@@ -1,0 +1,27 @@
+header {
+  background-color: #001f27;
+  color: #e2f9ff;
+  font-family: 'Vollkorn SC', serif;
+  height: 50px;
+  
+}
+  .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+  }
+  ul {
+      list-style: none;
+      width: 100%;
+      padding: 20px;
+  }
+li {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: auto 50px;
+  text-align: center;
+}
+
+  

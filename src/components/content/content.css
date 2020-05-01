@@ -1,0 +1,73 @@
+
+
+  .hero{
+    height: 100vh;
+    position: relative;
+    top: 0px;
+    /* object-fit: cover; */
+    z-index: -1;
+  
+  }
+
+.background, .wave2, .color-transition {
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+}
+
+.background > img, .wave2 >img, .color-transition > img{
+  width: 100%;    
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity .15s ease-out;
+  -moz-transition: opacity .15s ease-out;
+  -webkit-transition: opacity .15s ease-out;
+}
+
+.background {
+  height: 50vh;
+  /* position: absolute;
+  top: 0px; */
+}
+
+/* .wave2, .color-transition {
+  width: 100vw;
+  position: relative;
+  top: 0px;
+} */
+
+.wave2 {
+  z-index: 1;
+}
+
+.color-transition {
+  z-index: 2;
+}
+
+/* .text-overlay{
+  width: 60%;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  transition: 0.5s;
+
+} */
+
+.body-copy{
+  background-color: #001f27;
+  height: 300vh;
+  z-index: -2;
+  top: -70vh;
+  position: relative;
+
+}
+
+.body-copy > p {
+  margin: 0 auto;
+  width: 50%;
+  padding: 80vh 5px;
+  color: #e2f9ff;
+}
