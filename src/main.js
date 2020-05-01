@@ -6,61 +6,54 @@ const root = document.getElementById('root');
 const app = new App();
 root.appendChild(app.render());
 
-window.addEventListener('scroll', function(e) {
-
-// console.log('scroll!!');
+///paralax scroll
+window.addEventListener('scroll', function() {
   let scrolled = window.pageYOffset;
   const transition = document.querySelector('.color-transition');
-  //   const wave = document.getElementById('wave2');
-    
-  //   wave.style.top = -(scrolled * 1.25)  + 'px';
-  transition.style.top = -(scrolled * 2.5) + 'px';
+  transition.style.top = -(scrolled * 1.5) + 'px';
 });
 
-window.addEventListener('scroll', function(e) {
-
-  // console.log('scroll!!');
+///paralax scroll
+window.addEventListener('scroll', function() {
   let scrolled = window.pageYOffset;
   const wave = document.querySelector('.wave2');
-  //   const wave = document.getElementById('wave2');
-        
-  //   wave.style.top = -(scrolled * 1.25)  + 'px';
-  wave.style.top = -(scrolled * 2) + 'px';
-
+  wave.style.top = -(scrolled * 1.25) + 'px';
   fadeBackground();
+  collapseBackground();
+  showHeader();
+  scaleOverlay();
 });
 
+//fades out background
 const fadeBackground = function() {
-    let background = document.getElementById('background');
-
-    if(window.scrollY > 50) {
-        background.setAttribute('class', 'background fade');
-    } else { background.setAttribute('class', 'background'); }
-
-
-    console.log('scroll');
-
+  let background = document.getElementById('background');
+  
+  if(window.scrollY > 30) {
+    background.setAttribute('class', 'background fade');
+  } else { background.setAttribute('class', 'background'); }
 };
 
-//Brings Header into view
-// window.addEventListener('scroll', function(e) {
-//   if(window.scrollY > 350){
-//     document.getElementById('text-overlay').setAttribute('style', 'width:15%; position:absolute; top:350px');
-    
-//   } else { document.getElementById('text-overlay').style.width = 60 + '%';
-//   } 
-// });
+//scales down height of background image
+const collapseBackground = function() {
+  let background = document.getElementById('background');
+  
+  if(window.scrollY > 175) {
+    background.setAttribute('class', 'background fade collapse');
+  } else if(window.scrollY > 30) { 
+    background.setAttribute('class', 'background fade'); }
+};
 
+const showHeader = function() {
+  let header = document.getElementById('main-head');
+  console.log(header);
+  if(window.scrollY > 175) { 
+    header.setAttribute('class', 'drop');
+  } else { header.setAttribute('class', 'lift'); }  
+};
 
-
-// function showHeader() {
-//     if(document.body.scrollTop > 350 || document.documentElement.scroolTop > 350) {
-//         console.log('logo change');
-//         document.getElementById('text-overlay').style.width = 15 + '%';
-//     } else { document.getElementById('text-overlay').style.width = 60 + '%';
-// }
-// }
-
-// window.onscroll = function() {
-//   showHeader();
-// };
+const scaleOverlay = function() {
+  let overlay = document.getElementById('text-overlay');
+  if(window.scrollY > 200) {
+    overlay.setAttribute('class', 'text-overlay scale');
+  } else { overlay.setAttribute('class', 'text-overlay unscale'); }
+};

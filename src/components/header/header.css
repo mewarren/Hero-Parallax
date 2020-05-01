@@ -1,27 +1,45 @@
-header {
-  background-color: #001f27;
-  color: #e2f9ff;
-  font-family: 'Vollkorn SC', serif;
-  height: 50px;
-  
-}
+
   .header-flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      display: grid;
+      grid-template-columns: [line1] 100px [line2] 100px [line3] auto [line4] 100px [line5] 100px;
+      /* justify-content: space-between;
+      align-items: center; */
       box-sizing: border-box;
   }
   ul {
       list-style: none;
-      width: 100%;
-      padding: 20px;
+      /* width: 100%; */
+      /* padding: 20px; */
   }
+
 li {
   display: inline-block;
+  justify-self: center;
   font-size: 12px;
   text-transform: uppercase;
-  margin: auto 50px;
+  margin: 0 auto;
   text-align: center;
 }
+
+/* #welcome {
+  grid-column-start: [line1];
+  grid-column-end: [line2];
+}
+
+#attractions {
+  grid-column-start: [line2];
+  grid-column-end: [line3];
+}
+
+#food {
+  grid-column-start: line4;
+  grid-column-end: line5;
+}
+
+#wvisit {
+  grid-column-start: line5;
+} */
+
+
 
   
