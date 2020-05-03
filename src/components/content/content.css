@@ -28,9 +28,9 @@
 
 .collapse > img {
   height: 0;
-  transition: height .25s ease-out-in;
-  -moz-transition: height .25s ease-out;
-  -webkit-transition: height .25s ease-out;
+  transition: height .2s ease-out-in;
+  -moz-transition: height .2s ease-out;
+  -webkit-transition: height .2s ease-out;
 }
 
 

@@ -10,7 +10,7 @@ root.appendChild(app.render());
 window.addEventListener('scroll', function() {
   let scrolled = window.pageYOffset;
   const transition = document.querySelector('.color-transition');
-  transition.style.top = -(scrolled * 1.5) + 'px';
+  transition.style.top = -(scrolled * 1.75) + 'px';
 });
 
 ///paralax scroll
@@ -43,13 +43,14 @@ const collapseBackground = function() {
     background.setAttribute('class', 'background fade'); }
 };
 
-const showHeader = function() {
-  let header = document.getElementById('main-head');
-  console.log(header);
-  if(window.scrollY > 175) { 
-    header.setAttribute('class', 'drop');
-  } else { header.setAttribute('class', 'lift'); }  
-};
+//drop down transition for header
+// const showHeader = function() {
+//   let header = document.getElementById('main-head');
+//   console.log(header);
+//   if(window.scrollY > 175) { 
+//     header.setAttribute('class', 'drop');
+//   } else { header.setAttribute('class', 'lift'); }  
+// };
 
 const scaleOverlay = function() {
   let overlay = document.getElementById('text-overlay');

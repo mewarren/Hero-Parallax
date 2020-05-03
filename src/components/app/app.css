@@ -11,26 +11,3 @@
   "footer";
   grid-template-rows: auto 1fr auto;
 } */
-
-header {
-  background-color: #001f27;
-  color: #e2f9ff;
-  font-family: 'Vollkorn SC', serif;
-  height: 100px;
-  top: -100px;
-  position: fixed;
-  width: 100%;
-  z-index: 9;
-}
-
-.drop {
-  top: 0;
-  transition: top .25s ease-in;
-}
-
-.lift {
-  top: -100;
-  transition: top .25s ease-out;
-}
-
-
