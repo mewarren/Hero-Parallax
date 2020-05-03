@@ -1,9 +1,10 @@
 header {
-  background-color: #001f27;
+  background-color: rgba(0, 31, 39, .5);
+  /* opacity: .5; */
   color: #e2f9ff;
-  font-family: 'Vollkorn SC', serif;
+  
   height: 100px;
-  /* top: -100px; */
+  top: -100px;
   position: fixed;
   width: 100%;
   z-index: 9;
@@ -20,45 +21,43 @@ header {
 }
 
 .header-flex {
-    display: grid;
-    grid-template-columns: 25% auto auto auto auto;
-    grid-gap: 1rem;
-    grid-template-areas: 
-    "home stay go do know";
-    /* justify-content: space-between; */
-    align-items: center;
-    box-sizing: border-box;
+  width: 100%;
+  max-height: 100px;
+  display: grid;
+  grid-template-columns: 35% 60% 5%;
+  grid-gap: 1rem;
+  grid-template-areas: 
+    "home links .";
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.home { grid-area: home;}
+.home { grid-area: home; }
+.links {grid-area: links; }
 .stay { grid-area: stay; }
 .go { grid-area: go; }
 .do { grid-area: do; }
 .know { grid-area: know; }
 
-.home, .stay, .go, .do, .know {
-  justify-self: start;
-  align-self: center;
-}
-
 .header-flex > img {
   width: 150px;
-  left: 0;
-}
-.header-flex >ul {
-    list-style: none;
-    width: 100%;
-    padding: 20px;
+  margin: 5px auto auto 25px;
+  align-self: start;
 }
 
-.header-flex > li {
-/* display: inline; */
-justify-self: center;
-font-size: 16px;
-text-transform: uppercase;
-/* margin: 0 auto; */
-padding: 0 30px 0;
-width: 120px;
-/* text-align: center; */
+.header-flex >ul {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: .5rem;
+  grid-template-areas: 
+    "stay go do know";
+  list-style: none;
+  width: 100%;
+  padding: 10px;
+}
+
+.header-flex > ul > li {
+font: 500 16px 'Asap', sans-serif;
+width: 110px;
 }
 
