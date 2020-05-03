@@ -65,11 +65,14 @@ img {
 }
 
 .body-copy {
-  background-color: #001f27;
-  /* height: 100vh; */
+  /* background-color: #001f27; */
+  height: 100vh;
+  width: 100%;
   z-index: -2;
   top: 100vh;
   /* position: absolute; */
+  display: flex;
+  flex-direction: row;
 
 }
 
@@ -79,16 +82,54 @@ img {
   /* height: 50px; */
 }
 
-.body-copy > div > img {
-  /* box-sizing: border-box; */
-  /* height: 20px; */
-}
 
-.body-copy > p {
+
+/* .body-copy > p {
 
   margin: 0 auto;
   width: 50%;
   padding:5px;
   font:  400 16px/24px 'Asap', sans-serif;
   color: #e2f9ff;
+} */
+
+.attractions {
+  width: 20%;
+  height: 400px;
+  font-family: 'Asap', sans-serif;
+  color: white;
+  margin: 0 20px 0 20px;
+  padding-top: 300px;
+  box-sizing: border-box;
+  border: 2px solid white;
+}
+
+.attractions:hover {
+  padding-top: 0;
+  transition: padding-top .5s ease-in-out;
+}
+
+.descriptions {
+  background-color: #DD4122;
+  height: 90%;
+  padding: 20px;
+  position: relative;
+}
+
+.descriptions > h3 {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.descriptions > h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.descriptions > p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
 }
