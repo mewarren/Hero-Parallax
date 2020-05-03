@@ -1,9 +1,10 @@
 header {
-  background-color: #001f27;
+  background-color: rgba(0, 31, 39, .5);
+  /* opacity: .5; */
   color: #e2f9ff;
-  font-family: 'Asap', sans-serif;
+  
   height: 100px;
-  /* top: -100px; */
+  top: -100px;
   position: fixed;
   width: 100%;
   z-index: 9;
@@ -56,7 +57,7 @@ header {
 }
 
 .header-flex > ul > li {
-font-size: 16px;
+font: 500 16px 'Asap', sans-serif;
 width: 110px;
 }
 
