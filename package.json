@@ -28,5 +28,8 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.5"
+  },
+  "dependencies": {
+    "sass": "^1.26.5"
   }
 }

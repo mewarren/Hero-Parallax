@@ -61,3 +61,7 @@ font: 500 16px 'Asap', sans-serif;
 width: 110px;
 }
 
+.header-flex > ul > li:hover {
+  color: orange;
+}
+
