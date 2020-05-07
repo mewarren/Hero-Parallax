@@ -13,7 +13,7 @@ export default class App{
   render(){
     const dom = template.clone();
 
-    dom.querySelector('header').appendChild(new Header().render());
+    // dom.querySelector('header').appendChild(new Header().render());
     dom.querySelector('main').appendChild(new Content().render());
 
 

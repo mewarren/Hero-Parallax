@@ -4,6 +4,7 @@
   height: 100vh;
   position: relative;
   /* top: 0px;   */
+  background-color:#001f27;
 }
 
 img { 
@@ -44,7 +45,7 @@ img {
   /* bottom: 0; */
 }
 
-.text-overlay, .body-copy {
+.text-overlay, .body-copy, .greeting {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -64,23 +65,31 @@ img {
   width: 60%;
 }
 
+.greeting {
+  width: 100%;
+  top: 105vh;
+  /* height: 50px; */
+  justify-content: center;  
+  z-index: 8;
+
+}
+
+.greeting > img {
+  width: 60%;
+}
+
 .body-copy {
   /* background-color: #001f27; */
   height: 100vh;
   width: 100%;
   z-index: -2;
-  top: 100vh;
+  top: 105vh;
   /* position: absolute; */
   display: flex;
   flex-direction: row;
 
 }
 
-.greeting {
-  width: 60%;
-  /* top: 70vh; */
-  /* height: 50px; */
-}
 
 #shark, #hike, #haka, #boats {
   background-repeat: no-repeat;
@@ -113,19 +122,24 @@ img {
 .attractions {
   width: 20%;
   height: 400px;
+  box-shadow: 3px 3px 5px rgba(0, 31, 39, .3);
+
   font-family: 'Asap', sans-serif;
-  color: white;
+  color: #e2f9ff;
   margin: 0 20px 0 20px;
-  padding-top: 380px;
+  /* padding-top: 380px; */
   box-sizing: border-box;
   /* border: 2px solid white; */
   border-radius: 5px;
+  position: relative;
 }
 
 .attractions:hover {
-  padding-top: 105px;
+  /* padding-top: 105px; */
   /* height: 90%; */
-  transition: padding-top .65s ease-in-out;
+  transform: scale(1.1);
+  transition: transform .4s linear;
+
 }
 
 .attractions:hover .descriptions {
@@ -135,36 +149,44 @@ img {
 }
 
 .attractions:hover .descriptions > p {
-  display:block;
-  transition: all .5s ease-in-out;
+  /* display: block; */
+  opacity: 1;
+  transition: opacity .8s ease-in;
 }
 
 .attractions:hover .descriptions > h2 {
   
   position: static;
   top: 20px;
-  transition: all .5s ease-in-out;
+  transition: all .8s ease-in-out;
 }
 
 .descriptions {
-  background-color: #DD4122;
-  height: 40px;
+  background-color: rgba(221,65,34,.8);
+  /* opacity: .8; */
+  height: 20px;
   padding: 0 20px;
-  position: relative;
+  position: absolute;
   border-radius: 5px;
+  bottom: 0px;
+  left: 0;
+  width: calc(100% - 40px);
 }
 
 .descriptions > h2 {
   font-size: 30px;
   font-weight: 700;
+  text-shadow: 0 0 5px rgba(0, 31, 39, .2);
   margin-bottom: 24px;
   position: absolute;
   top: -80px;
+
 }
 
 .descriptions > p {
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-  display: none;
+  /* display: none; */
+  opacity: 0;
 }

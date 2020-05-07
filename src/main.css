@@ -1,4 +1,8 @@
-html {height: 100%; background-color:#001f27;}
+html {
+  height: 100%; 
+  background-color:#001f27;
+  /* background-color: #e2f9ff; */
+}
 
 body {min-height: 100%;}
     

@@ -13,7 +13,7 @@ window.addEventListener('scroll', function() {
   transitionScroll();
   fadeBackground();
   collapseBackground();
-  showHeader();
+  // showHeader();
   // scaleOverlay();
 
 });
